@@ -54,6 +54,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
     'main_domain' => env('MAIN_DOMAIN', 'multitenancyapp.test'),
+    'bat_script' => env(base_path('BAT_SCRIPT_PATH'), base_path('scripts/add-domain.bat')),
+
 
 
     /*

@@ -81,7 +81,11 @@ A starter kit for building Laravel multi-tenancy applications. This kit provides
     php artisan serve
     ```
 
-2. For production environments, configure your web server to handle tenant subdomains and route requests to Laravel.
+2. For dynamic subdomains on your local machine, I created a bat script in the root directory of the application to modify your local machine host file and this Script is utilized in the TenantRegister.php class component.
+
+    N.B: feel free to customize according to personal preference!
+
+3. For production environments, configure your web server to handle tenant subdomains and route requests to Laravel.
 
 ## Customization
 

@@ -55,15 +55,17 @@ class TenantRegister extends Component
 
             event(new TenantRegistered($tenant, $this->email, $this->password));
 
+
+            //********************************************
             //This BLOCK of code is for creating a new subdomain dynamically on my local machine in my windows hosts file.
             $storeName = $slug; // dynamically set based on tenant
-            $scriptPath = 'C:\\laragon\\add-domain.bat'; // Ensure correct path to batch script
+            $scriptPath = config('app.bat_script'); // Ensure correct path to batch script
             // Execute the script
             exec("powershell Start-Process '$scriptPath' -ArgumentList '$storeName' -Verb runAs", $output, $returnVar);
             // Log output to larvel.log
             Log::info('Script Output: ' . implode("\n", $output));
             Log::info('Return Value: ' . $returnVar);
-
+            //*********************************************
 
 
             event(new Registered(($user = User::create($validated))));
