@@ -90,4 +90,4 @@ A starter kit for building Laravel multi-tenancy applications. This kit provides
 ## Customization
 
 -   **Tenant Subdomains**: You can modify the subdomain routing logic and database configurations in `TenantMiddleware` to better suit your needs.
--   **Tenant Models**: The default user model for tenants is `TenantUser`. You can easily extend or modify it to include additional attributes or relationships.
+-   **Tenant Models**: The default user model for tenants is `Tenant/User`. You can easily extend or modify it to include additional attributes or relationships.
